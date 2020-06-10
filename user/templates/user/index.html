@@ -1,11 +1,11 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title> Login & Registration Form </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="{% static 'user/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user/css/style.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,10 +27,10 @@
 
       <div class="social-media">
         <ul>
-          <li><img src="{% static 'user/images/facebook.png' %}"></li>
-          <li><img src="{% static 'user/images/twitter.png' %}"></li>
-          <li><img src="{% static 'user/images/linkedin.png' %}"></li>
-          <li><img src="{% static 'user/images/instagram.png' %}"></li>
+          <li><img src="{% static 'user/img/facebook.png' %}"></li>
+          <li><img src="{% static 'user/img/twitter.png' %}"></li>
+          <li><img src="{% static 'user/img/linkedin.png' %}"></li>
+          <li><img src="{% static 'user/img/instagram.png' %}"></li>
         </ul>
       </div>
       {%for message in messages %}
@@ -79,6 +79,6 @@
       </div>
     </div>
   </div>
-<script type="text/javascript" src="{% static 'user/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'user/js/script.js' %}"></script>
 </body>
 </html>

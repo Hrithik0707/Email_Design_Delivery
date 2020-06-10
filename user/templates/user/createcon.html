@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contact</title>
+</head>
+<body>
+    <form action="#" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="name" placeholder="Name" ><br>
+        <input type="email" name="email" placeholder="E-mail" ><br>
+        <input type="number" name="phone" placeholder="Phone" ><br>
+        <input type="text" name="city" placeholder="City" ><br>
+        <button type="submit">Create</button>
+   </form> 
+</body>
+</html>

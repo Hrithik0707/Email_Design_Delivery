@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sending Mail</title>
+    <style>
+    .fill-width {
+    height: 20px;
+    color:#31b0d5 ;
+    }
+    table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+  text-align:left;
+  padding:10px;
+    }
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family:verdana;
+    }
+
+    </style>
+</head>
+<body>
+
+<form action="send_mail" method="post">
+    {% csrf_token %}
+    {%for message in messages %}
+                    <h3>{{message}}</h3>
+                {% endfor %}
+    <table align="left">
+        <tr><td>Subject</td><td><input  class="fill-width" type="text" name="subject" required="required" size="100"></td></tr>
+        <tr><td>Message</td><td><textarea cols="100" rows="20" name="message"></textarea></td></tr>
+        <tr><td>From Mail</td><td><input class="fill-width"  type="text" name="from_mail" required="required" size="100"></td></tr>
+        <tr><td>Recipient List</td><td><input class="fill-width"  type="text" name="recipient_list" required="required" size="100"></td></tr>
+        <tr><td colspan="2"><input class="button" type="submit" value="Send" ></td></tr>
+    </table>
+</form>
+
+</body>
+</html>
