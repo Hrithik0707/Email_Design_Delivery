@@ -1,4 +1,5 @@
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@
 
       <div class="social-media">
         <ul>
-          <li><img src="{% static 'user/img/facebook.png' %}"></li>
+          <li><a href="{% provider_login_url 'google' %}"><img src="{% static 'user/img/facebook.png' %}"></a></li>
           <li><img src="{% static 'user/img/twitter.png' %}"></li>
           <li><img src="{% static 'user/img/linkedin.png' %}"></li>
           <li><img src="{% static 'user/img/instagram.png' %}"></li>
